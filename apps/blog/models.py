@@ -32,7 +32,7 @@ class Category(models.Model):
     update_time = models.DateTimeField(verbose_name=u'修改时间',blank=True,null=True)
 
     class Meta:
-        verbose_name = u'文章类型'
+        verbose_name = u'项目类型'
         verbose_name_plural = verbose_name
         ordering = ['rank','-create_time']
 
@@ -44,7 +44,7 @@ class Article(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL,verbose_name=u'作者')
     category = models.ForeignKey(Category,verbose_name=u'类型')
     title = models.CharField(max_length=50,verbose_name=u'标题')
-    article_from = models.IntegerField(default=0,choices=ARTICLE_FROM.items(),verbose_name=u'文章来源')
+    article_from = models.IntegerField(default=0,choices=ARTICLE_FROM.items(),verbose_name=u'项目来源')
     summary = models.TextField(verbose_name=u'摘要')
     tags = models.CharField(max_length=100, null=True, blank=True, verbose_name=u'标签', help_text=u'用逗号分隔')
     content = UEditorField(verbose_name=u'正文', toolbars='full', width='600', height='300', imagePath='article/ueditor/',filePath='article/ueditor',default='')
@@ -52,13 +52,13 @@ class Article(models.Model):
 
     is_top = models.BooleanField(default=False,verbose_name=u'是否置顶')
     rank = models.IntegerField(default=0,verbose_name=u'排序')
-    status = models.IntegerField(default=0,choices=STATUS.items(),verbose_name=u'文章状态')
+    status = models.IntegerField(default=0,choices=STATUS.items(),verbose_name=u'项目状态')
 
     create_time = models.DateTimeField(default=timezone.now, verbose_name=u'创建时间')
     update_time = models.DateTimeField(verbose_name=u'修改时间', blank=True, null=True)
 
     class Meta:
-        verbose_name = u'文章'
+        verbose_name = u'项目'
         verbose_name_plural = verbose_name
 
     def get_absolute_url(self):

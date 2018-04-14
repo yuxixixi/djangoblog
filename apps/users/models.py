@@ -51,7 +51,7 @@ class UserProfile(AbstractUser):
     image = models.ImageField(max_length=200,upload_to='user_images/%Y/%m/%d' ,default='default.png', verbose_name=u'用户头像')
     au = models.IntegerField(default=0, verbose_name=u'用户活跃度')
 
-    topic_num = models.IntegerField(default=0,verbose_name=u'文章数')
+    topic_num = models.IntegerField(default=0,verbose_name=u'项目数')
     visit_num = models.IntegerField(default=0,verbose_name=u'访问量')
     comment_num = models.IntegerField(default=0,verbose_name=u'总评论数')
 

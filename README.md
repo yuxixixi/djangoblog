@@ -1,11 +1,11 @@
-# 主要功能介绍(演示网站：http://120.79.153.16)
-* 基于python3.5,django1.10.4的多用户博客论坛系统，集成了xadmin的后台管理，采用了djangoUeditor富文本处理文章。
+# 主要功能介绍
+* 集成了xadmin的后台管理，采用了djangoUeditor富文本处理项目。
 * 多用户登录，注册，密码修改,上传头像
-* 每个用户可以发表文章，评论别人的文章
-* 每点击打开一篇文章，该文章访问量加1
-* 文章有类型，标签，可以通过类型标签来筛选文章
-* 热门文章，最新评论，友情链接
-* 通过发表文章的数量，访问量和点赞数排出活跃的用户
+* 每个用户可以发表项目，评论别人的项目
+* 每点击打开一项目，该项目访问量加1
+* 项目有类型，标签，可以通过类型标签来筛选项目
+* 热门项目，最新评论，友情链接
+* 通过发表项目的数量，访问量和点赞数排出活跃的用户
 * 参考了https://github.com/billvsme/vmaig_blog 和 https://github.com/zaxlct/imooc-django 等，非常感谢他们。
 
 # 使用方法
@@ -82,17 +82,17 @@ python manage.py runserver                         #运行项目
 * 先进入后台管理
 ![](static/img/houtailogin.png)
 ![](static/img/houtai.png)
-* 创建文章类型
+* 创建项目类型
 ![](static/img/articlecategory.png)
 ![](static/img/categoryedit.png)
 ![](static/img/categoryeditsuccess.png)
-* 添加文章
+* 添加项目
 ![](static/img/articleedit2.png)
 * 用户注册，登录
 ![](static/img/register.png)
 * 头像设置
 ![](static/img/touxiang.png)
-* 发表文章
+* 发表项目
 ![](static/img/articleedit.png)
 ![](static/img/articleedit1.png)
 * 再次访问，大功告成！！！(其他操作略。。。)

@@ -14,7 +14,7 @@ class BaseSetting(object):
 
 
 class GlobalSettings(object):
-    site_title = "博客后台管理"
+    site_title = "后台管理"
     site_footer = "开发者在线"
     menu_style = 'accordion'
 

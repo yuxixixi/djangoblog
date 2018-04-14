@@ -53,7 +53,7 @@ class ArticleDetailView(BaseMixin, DetailView):
     def get_object(self, queryset=None):
         obj = super(ArticleDetailView, self).get_object()
 
-        #文章点击数 + 1
+        #项目点击数 + 1
         obj.reading_num += 1
         obj.save()
 

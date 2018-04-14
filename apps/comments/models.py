@@ -8,7 +8,7 @@ from datetime import datetime
 
 class Comment(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL,verbose_name=u'用户')
-    article = models.ForeignKey(Article,verbose_name=u'文章')
+    article = models.ForeignKey(Article,verbose_name=u'项目')
     text = models.TextField(verbose_name=u'评论')
     is_removed = models.BooleanField(default=False)
     parent = models.ForeignKey('self',default=None,blank=True,null=True,verbose_name=u'父评论')
